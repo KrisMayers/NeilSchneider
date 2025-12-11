@@ -1,5 +1,8 @@
 import React, { forwardRef, useRef, useEffect, useState } from 'react';
 
+// Import all images from the assets folder as URLs so Vite bundles them correctly.
+const images = import.meta.glob('/src/assets/images/*.{png,jpg,jpeg,webp,svg}', { eager: true, as: 'url' })
+
 const PortfolioGrid = forwardRef(function PortfolioGrid({ items, onSelect, onHover, isTransitioning }, ref) {
     const internalRef = useRef(null)
     // assign forwarded ref properly (works for object refs)
@@ -91,7 +94,7 @@ const PortfolioGrid = forwardRef(function PortfolioGrid({ items, onSelect, onHov
                 className="cursor-pointer bg-secondary shadow-lg transform transition-all duration-500 ease-in-out hover:scale-105 hover:opacity-50 mb-8 md:mb-0 min-w-[330px] lg:min-w-[31.85%]"
                 >
                     <div className="aspect-square overflow-hidden">
-                        <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+                            <img src={images[item.image] ?? item.image} alt={item.title} className="w-full h-full object-cover" />
                     </div>
                     <div className="p-6">
                         <h3 className="text-center text-beige font-heading text-3xl">{item.artist}</h3>

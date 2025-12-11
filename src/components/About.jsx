@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import useParallax from '../hooks/useParallax'
 import heroImage from '/src/assets/images/forest-bg.webp'
+import imageNeil from '/src/assets/images/neil.webp'
 
 function About() {
     const ref = useRef(null)
@@ -38,7 +39,7 @@ function About() {
                     </div>
                 </div>
                 <div className="container mx-auto px-8">
-                    <img src="/src/assets/images/neil.webp" alt="Portrait of Neil Schneider" className="rounded-lg shadow-lg w-full mx-auto" />
+                    <img src={imageNeil} alt="Portrait of Neil Schneider" className="rounded-lg shadow-lg w-full mx-auto" />
                 </div>
             </div>
         </section>

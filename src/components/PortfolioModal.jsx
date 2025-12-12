@@ -34,8 +34,8 @@ export default function PortfolioModal({ item, onClose }) {
 
                 <div className="p-8 text-center bg-primary bg-opacity-50">
                     <h3 className="text-3xl text-beige font-heading">{item.artist}</h3>
-                    <p className="text-lg text-beige mt-1">{item.title}</p>
-                    <p className="text-lg uppercase text-beige mt-4 mb-8 bg-beige text-primary font-bold inline-block px-3 py-1 shadow-full rounded-full"><FontAwesomeIcon icon={faTag} size="1x" style={{ color: "#0a090b" }} /> {item.genre}</p>
+                    <p className="text-sm md:text-lg text-beige mt-1">{item.title}</p>
+                    <p className="text-sm md:text-lg uppercase text-beige mt-4 mb-8 bg-beige text-primary font-bold inline-block px-3 py-1 shadow-full rounded-full"><FontAwesomeIcon icon={faTag} size="1x" style={{ color: "#0a090b" }} /> {item.genre}</p>
                     <iframe
                         src={item.bandcampEmbed}
                         style={{
@@ -53,24 +53,24 @@ export default function PortfolioModal({ item, onClose }) {
                 </div>
 
                 <div className="px-8 pb-8 text-center bg-primary bg-opacity-50">
-                    <p className="text-beige">My credits for this release:</p>
+                    <p className="text-beige text-sm">My credits for this release:</p>
                     <div className="flex justify-center gap-8 mt-8">
                         {item.mixing && (
                         <div className="flex flex-col items-center">
                             <FontAwesomeIcon icon={faSliders} size="2x" rotation="270" style={{ color: "#d9c3b0" }} />
-                            <span className="text-beige mt-2 text-sm">Mixing</span>
+                            <span className="text-xs md:text-sm text-beige mt-2 text-sm">Mixing</span>
                         </div>
                         )}
                         {item.mastering && (
                         <div className="flex flex-col items-center">
                             <FontAwesomeIcon icon={faHeadphones} size="2x" style={{ color: "#d9c3b0" }} />
-                            <span className="text-beige mt-2 text-sm">Mastering</span>
+                            <span className="text-xs md:text-sm text-beige mt-2 text-sm">Mastering</span>
                         </div>
                         )}
                         {item.drums && (
                         <div className="flex flex-col items-center">
                             <FontAwesomeIcon icon={faDrum} size="2x" style={{ color: "#d9c3b0" }} />
-                            <span className="text-beige mt-2 text-sm">Drums</span>
+                            <span className="text-xs md:text-sm text-beige mt-2 text-sm">Drums</span>
                         </div>
                         )}
                     </div>

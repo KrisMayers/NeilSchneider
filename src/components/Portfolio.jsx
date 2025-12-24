@@ -11,7 +11,9 @@ function Portfolio() {
     const [preloadItem, setPreloadItem] = useState(null)
     const gridRef = useRef(null) // optional: to reset scroll
 
-    const filteredItems = portfolioData.filter(i => i.type === filter)
+    const filteredItems = portfolioData
+        .filter(i => i.type === filter)
+        .sort((a, b) => new Date(b.release) - new Date(a.release))
 
     const changeFilter = (newFilter) => {
         if (newFilter === filter) return

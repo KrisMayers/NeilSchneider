@@ -83,8 +83,8 @@ const PortfolioGrid = forwardRef(function PortfolioGrid({ items, onSelect, onHov
                 role="list"
                 className={`flex gap-8 py-4 px-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth transition-all duration-500 ease-in-out ${isTransitioning ? 'opacity-0 -translate-y-2 pointer-events-none' : 'opacity-100 translate-y-0'}`}
                 style={{
-                    WebkitMaskImage: 'linear-gradient(to right, transparent, black 25%, black 75%, transparent)',
-                    maskImage: 'linear-gradient(to right, transparent, black 25%, black 75%, transparent)'
+                    WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
+                    maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)'
                 }}
                 onMouseLeave={() => onHover?.(null)}
             >
